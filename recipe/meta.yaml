@@ -1,4 +1,4 @@
-{% set version = '1.0.2' %}
+{% set version = "1.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/conflicted_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/conflicted/conflicted_{{ version }}.tar.gz
-  sha256: 2c35d6e2652c55f5a84409f7f720cff49795ab9a3b25e2d7a84b3ed3a2c509a8
+  sha256: ef2d13a3cfd9b917a06e6dcefe6d4cf38e336d6a00bdd5f55a9ccd9c0ad29f45
 
 build:
   merge_build_host: True  # [win]
