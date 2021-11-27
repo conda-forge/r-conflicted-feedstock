@@ -1,4 +1,4 @@
-{% set version = "1.0.4" %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/conflicted_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/conflicted/conflicted_{{ version }}.tar.gz
-  sha256: 2ae78d4f1d643b470a2a4b77148458a1abba81c5b2c2afe00d6bdcba1b23e076
+  sha256: 24fa24cd1d9a5c5c47a8976622d2c07a8a4db4aec5387b41e52865124256e9e1
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -40,13 +40,10 @@ test:
 about:
   home: https://github.com/r-lib/conflicted
   license: GPL-3.0-only
-  summary: R's default conflict management system gives the most recently loaded package precedence.
-    This can make it hard to detect conflicts,  particularly when they arise because
-    a package update creates ambiguity that did not previously exist. 'conflicted' takes
-    a different approach,  making every conflict an error and forcing you to choose
-    which function  to use.
+  summary: R's default conflict management system gives the most recently loaded package precedence. This can make it hard to detect conflicts,  particularly when they arise because a package update creates ambiguity that did not previously exist. 'conflicted' takes a different approach,  making every conflict an error and
+    forcing you to choose which function  to use.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
