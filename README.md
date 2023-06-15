@@ -1,11 +1,11 @@
-About r-conflicted
-==================
+About r-conflicted-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-conflicted-feedstock/blob/main/LICENSE.txt)
 
 Home: https://conflicted.r-lib.org/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-conflicted-feedstock/blob/main/LICENSE.txt)
 
 Summary: R's default conflict management system gives the most recently loaded package precedence. This can make it hard to detect conflicts,  particularly when they arise because a package update creates ambiguity that did not previously exist. 'conflicted' takes a different approach,  making every conflict an error and forcing you to choose which function  to use.
 
