@@ -1,6 +1,5 @@
 {% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-conflicted
@@ -13,8 +12,7 @@ source:
   sha256: c99b86bb52da3e7d1f4d96d70c77304d0434db5bd906edd8d743e89ac9223088
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
